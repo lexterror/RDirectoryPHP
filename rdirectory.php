@@ -66,7 +66,7 @@ packard($allitems);
 
  function packard($array) {
      sort($array);
-    echo "<table id='myTable' class='sortable'><tr style='background:deeppink;color:#fff;'><td class='mycurs' style='width:600px;'><span class='first'>Path | File</span></td><td  class='mycurs' style='width:200px'><span class='second'>Date</span></td><td  class='mycurs' style='100px'><span class='third'>Type</span></td><td  class='mycurs' style='50px;'><span class='fourth'>Size</span></td></tr>";
+    echo "<table id='myTable' class='sortable' style='table-layout:fixed;width:990px;'><tr style='color:#fff;'><td class='mycurs' style='width:600px;background:deeppink;'><span class='first'></span></td><td  class='mycurs' style='width:200px;background:#888;'><span class='second'></span></td><td  class='mycurs' style='100px;background:dodgerblue;'><span class='third'></span></td><td  class='mycurs' style='50px;background:orange;'><span class='fourth'></span></td></tr>";
     foreach ($array as $key)
     echo $key;
     echo "</table>";
@@ -176,9 +176,6 @@ function getFileType(string $url):string{
 
   <body onload="">
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="live search" style="top:10px;background:#fff;color:#000;right:0px;left:0;height:32px;margin-bottom:10px;position:fixed;margin:0 auto;border:5px solid dodgerblue;border-radius:10px;text-align:center;width:300px;height:32px;"></input>
-<ul>
-
-</ul>
 
 </body>
 </html>
@@ -256,8 +253,8 @@ https://www.kryogenix.org/code/browser/sorttable
 */
 table {
   table-layout: fixed ;
-  width: 100%;
   background:#fff;
+  width: 990px;
 }
 td {
   padding:5px;
@@ -265,20 +262,20 @@ td {
 .first {
 	display:inline-block;
 	width: 600px !important;
-white-space: nowrap;
+    white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
 }
 .second {
   display:inline-block;
-	width: 180px !important;	
+	width: 200px !important;	
 white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;	
 }
 .third {
 	display:inline-block;
-	width: 120px !important;
+	width: 100px !important;
 	white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
@@ -288,9 +285,24 @@ white-space: nowrap;
 white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
-	width: 45px !important;
+	width: 50px !important;
 }
+#myTable {
+    
+	border-collapse: collapse;
+}
+td {
+	max-height: 32px;
+	height: 32px;
+	line-height: 32px;
+    white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
 
+}
+tr {
+	white-space: nowrap;
+}
 </style>
 
 <script>
