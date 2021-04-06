@@ -66,7 +66,7 @@ packard($allitems);
 
  function packard($array) {
      sort($array);
-    echo "<table id='myTable' class='sortable' style='table-layout:fixed;width:990px;'><tr style='color:#fff;'><td class='mycurs' style='width:600px;background:deeppink;'><span class='first'></span></td><td  class='mycurs' style='width:200px;background:#888;'><span class='second'></span></td><td  class='mycurs' style='100px;background:dodgerblue;'><span class='third'></span></td><td  class='mycurs' style='50px;background:orange;'><span class='fourth'></span></td></tr>";
+    echo "<table id='myTable' class='sortable' style='table-layout:fixed;width:990px;'><tr style='color:#fff;'><th class='mycurs' style='width:600px;background:deeppink;'><span class='first'>Path | File</span></th><th  class='mycurs' style='width:200px;background:#888;'><span class='second'>Date</span></th><th class='mycurs' style='100px;background:dodgerblue;'><span class='third'>Type</span></th><th  class='mycurs' style='50px;background:orange;'><span class='fourth'>Size</span></th></tr>";
     foreach ($array as $key)
     echo $key;
     echo "</table>";
@@ -197,6 +197,9 @@ tr:nth-child(even) {background: #fff}
 tr:nth-child(odd) {background: #FFF}
 * {
   
+}
+th {
+	color: #fff;
 }
 .mycurs {
 	
