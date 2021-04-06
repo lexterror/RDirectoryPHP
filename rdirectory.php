@@ -66,7 +66,7 @@ packard($allitems);
 
  function packard($array) {
      sort($array);
-    echo "<table id='myTable' class='sortable'><tr style='background:deeppink;color:#fff;'><td class='mycurs' style='width:600px;'>Path | File</td><td  class='mycurs' style='width:200px'>Date</td><td  class='mycurs' style='100px'>Type</td><td  class='mycurs' style='50px;'>Size</td></tr>";
+    echo "<table id='myTable' class='sortable'><tr style='background:deeppink;color:#fff;'><td class='mycurs' style='width:600px;'><span class='first'>Path | File</span></td><td  class='mycurs' style='width:200px'><span class='second'>Date</span></td><td  class='mycurs' style='100px'><span class='third'>Type</span></td><td  class='mycurs' style='50px;'><span class='fourth'>Size</span></td></tr>";
     foreach ($array as $key)
     echo $key;
     echo "</table>";
@@ -222,7 +222,7 @@ span {
 	font-family:pragm;
 }
 table {
-	
+
 }
 .over {
 	white-space: nowrap;
@@ -292,43 +292,6 @@ white-space: nowrap;
 }
 
 </style>
-
-<script>
-
-
-           var input = document.getElementById('search');
-           input.onkeyup = function () {
-               // Declare variables
-               var filter, ul, li, a, i, txtValue;
-               filter = input.value.toUpperCase();
-               ul = document.getElementsByClassName('random');
-            
-               // Loop through all list items, and hide those who don't match the query
-               for (i = 0; i < ul.length; i++) {
-                   a = ul[i].getElementsByClassName('nameit')[0];
-                   txtValue = a.textContent || a.innerText;
-                   if (input.value.length == 0) {
-                       ul[i].style.display = "block";
-                      
-                   }
-                   else if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                       ul[i].style.display = "block";
-
-
-
-
-                   } else {
-                       ul[i].style.display = "none";
-
-
-                   }
-
-               }
-           }
-
-
-</script>
-
 
 <script>
 function myFunction() {
