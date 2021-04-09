@@ -26,7 +26,7 @@ $allitems = array();
 							$filesize = round($filesize / 1024 / 1024, 1); // megabytes with 1 digit
                 $ext = pathinfo($item, PATHINFO_EXTENSION);
                 $mytype = getFileType($ext);
-               $currenitem = "<tr><td><li class='random'><a target='blank' href='" . $dir . "/" . $item->getFilename() . "'>" . "<span class='first'><span style='color:#888'>" . $dir . "</span>" . "/" . "<span class='nameit' style='color:deeppink;'>" . $item->getFilename() . "</a></span></span></td><td><span class='second'>" . "<span style='color:#999;'>" . date ('F d Y H:i:s.',filemtime($item)) . "</span></span></td><td><span class='third'><span style='color:dodgerblue;'>" . $mytype . "</span></span></td><td><span class='fourth'>" . "<span style='color:orange;'>" . $filesize . "MB</style></span></span></li></td></tr>"; 
+               $currenitem = "<tr><td><li class='random'><a target='blank' href='" . $dir . "/" . $item->getFilename() . "'>" . "<span class='first'><span style='color:#888'>" . $dir . "</span>" . "/" . "<span class='nameit' style='color:deeppink;'>" . $item->getFilename() . "</a></span></span></td><td><span class='second'>" . "<span style='color:#999;'>" . date ('F d Y H:i:s.',$item->getMTime()) . "</span></span></td><td><span class='third'><span style='color:dodgerblue;'>" . $mytype . "</span></span></td><td><span class='fourth'>" . "<span style='color:orange;'>" . $filesize . "MB</style></span></span></li></td></tr>"; 
             //    echo "<br>"
             
                  
