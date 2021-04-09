@@ -22,7 +22,7 @@ $allitems = array();
             if ($item->isDir()) {
                 get_all_directory_and_files("$dir/$item");
             } else {
-            	$filesize = filesize($item); // bytes
+            	$filesize = $item->getSize(); // bytes
 							$filesize = round($filesize / 1024 / 1024, 1); // megabytes with 1 digit
                 $ext = pathinfo($item, PATHINFO_EXTENSION);
                 $mytype = getFileType($ext);
