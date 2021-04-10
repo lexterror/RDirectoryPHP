@@ -196,7 +196,8 @@ function getFileType(string $url):string{
 tr:nth-child(even) {background: #fff}
 tr:nth-child(odd) {background: #FFF}
 * {
-  
+  margin:0;
+  padding:0;
 }
 th {
 	color: #fff;
@@ -260,7 +261,7 @@ table {
   width: 990px;
 }
 td {
-  padding:5px;
+  padding:0px;
 }
 .first {
 	display:inline-block;
@@ -301,6 +302,7 @@ td {
     white-space: nowrap;
 	text-overflow:ellipsis;
 	overflow:hidden;
+	text-align: left;
 
 }
 tr {
@@ -320,7 +322,11 @@ function myFunction() {
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "inline-block";
+        tr[i].style.display = "block";
+        tr[i].style.textAlign = "left";
+        tr[i].style.paddingLeft = "0";
+        tr[i].style.marginLeft = "0";
+        
       } else {
         tr[i].style.display = "none";
       }
